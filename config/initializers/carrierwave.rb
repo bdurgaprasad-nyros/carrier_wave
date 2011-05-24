@@ -8,3 +8,16 @@
     #~ config.enable_processing = false
   #~ end
 #~ end
+
+    CarrierWave.configure do |config|
+      config.fog_credentials = {
+        :provider               => 'AWS',       # required
+        :aws_access_key_id      => 'AKIAJG7Y5HIWYXB6EMGQ',       # required
+        :aws_secret_access_key  => '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',       # required
+        :region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
+      }
+      config.fog_directory  = 'name_of_directory'                     # required
+      #config.fog_host       = 'https://assets.example.com'            # optional, defaults to nil
+      config.fog_public     = false                                   # optional, defaults to true
+      config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
+    end
