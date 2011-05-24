@@ -14,7 +14,7 @@
         :provider               => 'AWS',       # required
         :aws_access_key_id      => 'AKIAJG7Y5HIWYXB6EMGQ',       # required
         :aws_secret_access_key  => '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',       # required
-        :region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
+        #:region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
       }
       config.fog_directory  = 'prasad_images'                     # required
       #config.fog_host       = 'https://assets.example.com'            # optional, defaults to nil
