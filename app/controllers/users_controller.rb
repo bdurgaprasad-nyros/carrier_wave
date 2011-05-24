@@ -55,18 +55,18 @@ class UsersController < ApplicationController
 	#~ Record.create(:field1 => field1, :field2 => field2, :field3 => field3)
 
 	  
-	  render :text => params.inspect and return
+	  #~ render :text => params.inspect and return
     @user = User.new(params[:user])
 
-    #~ respond_to do |format|
-      #~ if @user.save
-        #~ format.html { redirect_to(@user, :notice => 'User was successfully created.') }
-        #~ format.xml  { render :xml => @user, :status => :created, :location => @user }
-      #~ else
-        #~ format.html { render :action => "new" }
-        #~ format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-      #~ end
-    #~ end
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        format.xml  { render :xml => @user, :status => :created, :location => @user }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   # PUT /users/1

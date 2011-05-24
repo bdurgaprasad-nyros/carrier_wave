@@ -13,7 +13,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'fastercsv'
-# gem 'rmagick' ,'2.0.0' 
+gem 'rmagick' ,'2.0.0' 
 # gem "image_science"
 
 # Use unicorn as the web server
