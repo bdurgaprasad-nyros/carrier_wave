@@ -9,7 +9,7 @@ gem "rake", "0.8.7"
 
 gem 'mysql'
 gem 'fog'
-gem 'carrierwave'
+gem 'carrierwave','0.5.3 '
 gem 'mini_magick'
 
 gem 'fastercsv'
