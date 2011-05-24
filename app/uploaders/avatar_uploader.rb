@@ -45,6 +45,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   
+def cache_dir
+  "#{Rails.root}/tmp/uploads"
+end
+
        
 
     version :thumb do
@@ -52,3 +56,4 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
 end
+
